@@ -1,10 +1,12 @@
-import { StyleSheet, View, Image, Text, SafeAreaView } from "react-native";
+import { View, Image, SafeAreaView } from "react-native";
+
+import { HeaderContainer, HeaderContent, HeaderTitle, HeaderSubtitle } from "./styles";
+
 const Header = () => {
   return (
-    <View style={styles.header}>
+    <HeaderContainer>
       <SafeAreaView />
-
-      <View style={styles.headerContent}>
+      <HeaderContent>
         <Image
           width={100}
           height={100}
@@ -14,33 +16,12 @@ const Header = () => {
         />
 
         <View>
-          <Text style={styles.headerTitle}>Calculadora</Text>
-          <Text style={styles.headerSubtitle}>De IMC</Text>
+          <HeaderTitle>Calculadora</HeaderTitle>
+          <HeaderSubtitle>De IMC</HeaderSubtitle>
         </View>
-      </View>
-    </View>
+      </HeaderContent>
+    </HeaderContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  header: {
-    backgroundColor: "#6E38B8",
-    padding: 32,
-  },
-  headerContent: {
-    flexDirection: "row",
-    gap: 16,
-  },
-  headerTitle: {
-    fontSize: 32,
-    fontWeight: "bold",
-    color: "#FFFFFF",
-  },
-  headerSubtitle: {
-    fontSize: 16,
-    fontWeight: "500",
-    color: "#FFFFFF",
-  },
-});
 
 export default Header;

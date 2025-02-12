@@ -25,7 +25,7 @@ export default function Page() {
           <View stle={styles.inputs}>
             <Input
               label="Peso (Kg)"
-              placeholder="informe seu peso"
+              placeholder="Informe seu Peso"
               value={peso}
               onChangeText={(text) => {
                 setPeso(text);
@@ -34,7 +34,7 @@ export default function Page() {
 
             <Input
               label="Altura (Cm)"
-              placeholder="informe sua altura"
+              placeholder="Informe sua Altura"
               value={altura}
               onChangeText={(text) => {
                 setAltura(text);
@@ -43,7 +43,7 @@ export default function Page() {
           </View>
 
           <Button
-            label="Calcular"
+              label="Calcular"
             href={{
               pathname: "/resultado",
               params: {

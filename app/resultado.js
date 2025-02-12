@@ -30,7 +30,7 @@ const ValorDoImc = ({ valor = 0 }) => {
 
 const ResultadoDoIMC = ({ titulo, subtitulo, corDeFundo }) => {
   return (
-    <View style={{ padding: 16, backgroundColor: corDeFundo, borderRadius: 8 }}>
+    <View style={{ padding: 16, backgroundColor: corDeFundo, borderRadius: 8, }}>
       <Text style={{ color: "#ffffff", fontSize: 16, fontWeight: "bold" }}>
         {titulo}
       </Text>
@@ -100,18 +100,19 @@ export default function Page() {
 
       <View style={{ flex: 1, padding: 32, justifyContent: "space-between", gap: 8 }}>
 
+      <ResultadoDoIMC
+        titulo={resultadoDoImc.classification}
+        subtitulo={resultadoDoImc.subtitle}
+        corDeFundo={resultadoDoImc.color}
+        />
         <View style={{ flexDirection: "row", gap: 8 }}>
           <CardValue valor={peso} label="Peso (kg)" />
           <CardValue valor={altura} label="Altura (cm)" />
         </View>
-
         <CardResultadoIMC imc={imc} />
 
-        <ResultadoDoIMC
-          titulo={resultadoDoImc.classification}
-          subtitulo={resultadoDoImc.subtitle}
-          corDeFundo={resultadoDoImc.color}
-        />
+
+        
         <Button
           label="Voltar"
           href={{

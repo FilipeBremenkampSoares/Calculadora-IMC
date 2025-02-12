@@ -1,6 +1,6 @@
 import { Text } from "react-native";
-export const TextValue = ({ Valor }) => {
-  return <Text style={{ fontSize: 40, fontWeight: "bold" }}>{Valor}</Text>;
+export const TextValue = ({ valor }) => {
+  return <Text style={{ fontSize: 40, fontWeight: "bold" }}>{valor}</Text>;
 };
 
 export const TextLabel = ({ label }) => {

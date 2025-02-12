@@ -1,37 +1,22 @@
 import { TextLabel, TextValue } from "../texts";
-import { View } from "react-native";
 
-export const BaseCard = ({ children }) => {
-  return (
-    <View
-      style={{
-        backgroundColor: "#ffffff",
-        borderColor: "#E7ECF3",
-        borderWidth: 1,
-        borderStyle: "solid",
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        height: 150,
-        borderRadius: 8,
-      }}
-    >
-      {children}
-    </View>
-  );
-};
+import {BaseCardValue, BaseCardIMC } from './styles'
 
 export const CardValue = ({ valor, label }) => {
   return (
-    <BaseCard>
+    <BaseCardValue>
       <TextValue valor={valor} />
       <TextLabel label={label} />
-    </BaseCard>
+    </BaseCardValue>
   );
 };
 
 export const CardResultadoIMC = ({ imc }) => {
   const valorComDecimais = parseFloat(imc);
 
-  return <CardValue valor={valorComDecimais.toFixed(2)} label="IMC" />;
-};
+return (
+  <BaseCardIMC>
+    <TextValue valor={valorComDecimais.toFixed(2)} />
+    <TextLabel label={imc} />
+  </BaseCardIMC>
+);}
